@@ -1,0 +1,10 @@
+<h1>All Flats</h1>
+<%= link_to "New Flat", new_flat_path if user_signed_in? %>
+<ul>
+  <% @flats.each do |flat| %>
+    <li>
+      <strong><%= flat.name %></strong> - <%= flat.address %> - $<%= flat.price %>
+      <p><%= flat.description %></p>
+    </li>
+  <% end %>
+</ul>
