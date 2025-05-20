@@ -1,6 +1,6 @@
 require "test_helper"
 
-class FlatTest < ActiveSupport::TestCase
+class FrogTest < ActiveSupport::TestCase
   # test "the truth" do
   #   assert true
   # end

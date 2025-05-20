@@ -1,0 +1,10 @@
+<h1>All Frogs</h1>
+<%= link_to "New Frog", new_frog_path if user_signed_in? %>
+<ul>
+  <% @frogs.each do |frog| %>
+    <li>
+      <strong><%= frog.name %></strong> - <%= frog.color %> - $<%= frog.age %>
+      <p><%= frog.description %></p>
+    </li>
+  <% end %>
+</ul>
