@@ -1,0 +1,15 @@
+<h1><%= @user.username %></h1>
+
+<ol>
+    <li><%= @user.username %></li>
+    <li><%= @user.email %></li>
+    <li><%= @user.created_at %></li>
+    <li><%= @user.updated_at %></li>
+</ol>
+
+<ol>
+    <li><%= link_to "Edit", edit_user_registration_path %></li>
+    <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
+    <li><%= link_to "Back", :back %></li>
+    <li><%= link_to "Home", root_path %></li>
+</ol>
