@@ -6,6 +6,10 @@ class FrogsController < ApplicationController
     @frogs = Frog.all
   end
 
+  def show
+    @frog = Frog.find(params[:id])
+  end
+
   def create
     @frog = current_user.frogs.build(frog_params)
     if @frog.save
