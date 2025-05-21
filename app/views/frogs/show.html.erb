@@ -1,18 +1,53 @@
 
 <div class="container">
-    <div class="row">
-        <div class="col-12">
-        <h1 class="text-center">Frog Details</h1>
+    <div class="col-12 mx-auto bg-primary">
+        <div class="frog-title d-flex">
+            <div class="frog-title-left">
+                <%= @frog.name %>
+                <%= @frog.species %>
+            </div>
+            <div class="frog-title-right">
+                <p class="btn btn-warning"> Share </p>
+                <p class="btn btn-warning"> Save </p>
+            </div>
         </div>
-    </div>
     
-    <div class="row">
-        <div class="col-12">
-        <h2><%= @frog.name %></h2>
-        <p><%= @frog.description %></p>
+        <div class="frog-images d-flex">
+            <div class="img-big">
+                <img src="https://i0.wp.com/www.australiangeographic.com.au/wp-content/uploads/2022/10/Green-tree-frog_Litoria-caerulea_Ashley-Whitworth-shutterstock-scaled.jpg?resize=1000%2C669&ssl=1", alt="frog-pic" >
+            </div>
+            <div class="img-small d-grid">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Litoria_caerulea_-_Darwin_NT.jpg/1024px-Litoria_caerulea_-_Darwin_NT.jpg", alt="frog-small-1">
+                <img src="https://i.ytimg.com/vi/Ldx8P4SXkTI/maxresdefault.jpg", alt="frog-small-2">
+                <img src="https://visitdaintree.com.au/files/2025/01/white-lipped-tree-frog-3.jpg", alt="frog-small-3">
+                <img src="https://azwp-az-prod-1-ap-southeast-2.s3.amazonaws.com/uploads/2021/08/WLT_FROG_WEB_IMAGES_900x600.jpg", alt="frog-small-4">
+            </div>
+            <p class="btn btn-warning"> Show more </p>
         </div>
-    </div>
-    
+
+        <div class="frog-description">
+            <div class="frog-description-left">
+                <h2> About </h2>
+                <p> Name: <%= @frog.name %> </p>
+                <p> Species: <%= @frog.species %> </p>
+                <p> Gender: <%= @frog.gender %> </p>
+                <p> Age: <%= @frog.age %> </p>
+                <p> Description: <%= @frog.description %> </p>
+                <p> Color: <%= @frog.color %> </p>
+            </div>
+
+            <div class="frog-description-right">
+                <h2> Reserve <%= @frog.name %></h2>
+                <div class="Rent">
+                    <div class="Rent-top d-flex">
+                        <p class="btn btn-warning"> Rent: Start </p>
+                        <p class="btn btn-warning"> Rent: End </p>
+                    </div>
+                    <p class="btn btn-warning"> Price: £... </p>
+                    <p class="btn btn-warning"> Change Date </p>
+                </div>
+            </div>
+
 
     </div>
     
