@@ -11,6 +11,7 @@
                 <p class="btn btn-warning"> Save </p>
             </div>
         </div>
+
     
         <div class="frog-images d-flex">
             <div class="img-big">
@@ -49,12 +50,16 @@
             </div>
 
 
+
     </div>
-    
+
     <!-- Add a button to book the frog -->
     <div class="row">
         <div class="col-12 text-center">
-        <h2> Book this Frog </h2>
-        </div>
-    </div>
+        <h2> Book this Frog</h2>
+        <%= simple_form_for [@frog, @booking] do |f| %>
+          <%= f.input :start_date %>
+          <%= f.input :end_date %>
+          <%= f.submit "Reserve", class: "btn btn-primary" %>
+        <% end %>
 </div>

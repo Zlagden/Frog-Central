@@ -8,6 +8,7 @@ class FrogsController < ApplicationController
 
   def show
     @frog = Frog.find(params[:id])
+    @booking = Booking.new
   end
 
   def create
