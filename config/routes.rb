@@ -2,7 +2,9 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "pages#home"
 
-  resources :frogs, only: [:index, :show, :new, :create]
+  resources :frogs, only: [:index, :show, :new, :create] do
+    resources :bookings, only: [:create]
+  end
 
   resources :bookings, only: [:index]
 
@@ -15,5 +17,5 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   resources :users, only: [:show]
-  
+
 end
