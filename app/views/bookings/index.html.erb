@@ -1,0 +1,11 @@
+<h1>All Bookings</h1>
+
+<ul>
+  <% @bookings.each do |booking| %>
+    <li>
+      Booking ID: <%= booking.id %> |
+      User: <%= booking.user.name %> |
+      Date: <%= booking.date %>
+    </li>
+  <% end %>
+</ul>
