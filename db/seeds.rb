@@ -45,4 +45,4 @@ frogs = [
 
 Frog.create!(frogs)
 
-puts "✅ Frogs seeded successfully!"
+puts "✅ Frogs seeded successfully!#{Frog.count}"

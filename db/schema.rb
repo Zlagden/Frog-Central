@@ -25,17 +25,6 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_20_155044) do
     t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
-  create_table "flats", force: :cascade do |t|
-    t.string "name"
-    t.string "address"
-    t.integer "price"
-    t.text "description"
-    t.bigint "user_id", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_flats_on_user_id"
-  end
-
   create_table "frogs", force: :cascade do |t|
     t.string "species"
     t.string "name"
@@ -60,11 +49,9 @@ ActiveRecord::Schema[7.1].define(version: 2025_05_20_155044) do
     t.string "username", default: "", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
-    t.index ["username"], name: "index_users_on_username", unique: true
   end
 
   add_foreign_key "bookings", "frogs"
   add_foreign_key "bookings", "users"
-  add_foreign_key "flats", "users"
   add_foreign_key "frogs", "users"
 end

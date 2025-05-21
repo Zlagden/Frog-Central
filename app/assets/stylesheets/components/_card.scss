@@ -1,12 +1,23 @@
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
 .card-trip {
   overflow: hidden;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 10px;
+  // width: 30%;
+  // height: 50%;
+  margin-bottom: 25px;
 }
 
+
 .card-trip > img {
-  height: 200px;
+  height: auto;
   width: 100%;
   object-fit: cover;
 }
@@ -18,7 +29,7 @@
 }
 
 .card-trip p {
-  font-size: 12px;
+  font-size: 20px;
   opacity: .7;
   margin: 0;
 }
