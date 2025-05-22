@@ -4,8 +4,9 @@
   <% @bookings.each do |booking| %>
     <li>
       Booking ID: <%= booking.id %> |
-      User: <%= booking.user.name %> |
-      Date: <%= booking.date %>
+      User: <%= booking.user.username %> |
+      Date: <%= booking.start_date %>
+      Date: <%= booking.end_date %> |
     </li>
   <% end %>
 </ul>

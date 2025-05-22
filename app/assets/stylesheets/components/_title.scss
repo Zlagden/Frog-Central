@@ -1,10 +1,63 @@
+.frog-container {
+    background-color: rgb(165, 187, 26);
+    // border-radius: 1rem;
+    // background: 
+    //     linear-gradient(rgb(244, 147, 6), rgb(165, 187, 26)) padding-box, /* center */
+    //     radial-gradient(circle, rgb(230, 38, 58) 0%, transparent 80%) border-box; /* border */
+    // border: 10px solid transparent;
+}
+
+.frog-display {
+    background-color: rgb(244, 147, 6);
+    background-size: 100% 100%;
+}
+
 .frog-title {
     display: flex;
     justify-content: space-between;
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    align-items: center;
+    margin: auto;
+    background-color: rgba(255,255,255,0.9);
+    border-radius: 10px;
     font-size: 40px;
     font-weight: bold;
+
+    .frog-share {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(165, 187, 26);
+        border-radius: 10px;
+        padding: 5px;
+    }
+
+    .frog-save {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgb(165, 187, 26);
+        border-radius: 10px;
+        padding: 5px;
+    }
+}
+
+.frog-title-left {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-left: 25px;
+}
+
+.frog-title-right {
+    // display: flex;
+    // align-items: center;
+    // justify-content: flex-end;
+    // padding-right: 25px;
+    // margin-top: 16px;
+    // font-weight: bold;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    grid-gap: 16px;
+    margin-top: 16px;
+    margin-right: 25px;
 }

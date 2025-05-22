@@ -1,56 +1,75 @@
 
-<div class="container col-10 mx-auto bg-danger">
-    <div class="frog-display col-10 mx-auto bg-primary">
-        <div class="frog-title">
-            <div class="frog-title-left">
+<div class="frog-container col-10 my-3 mx-auto">
+    <div class="frog-display col-11 mx-auto"  style="background-image: url(<%= image_path('pond.jpg') %>)">
+
+        <div class="frog-title col-12 mb-5 py-3 pl-2">
+            <div class="frog-title-left 6-col">
                 <%= @frog.name %>
                 <%= @frog.species %>
             </div>
-            <div class="frog-title-right">
-                <p class="btn btn-warning"> Share </p>
-                <p class="btn btn-warning"> Save </p>
+            <div class="frog-title-right col-6 mt-0">
+                <div></div>
+                <div class="frog-share btn d-flex">
+                    <i class="fa-solid fa-share-from-square"></i>
+                    <p class="m-0"> Share </p>
+                </div>
+                <div class="frog-save btn">
+                    <i class="fa-solid fa-bookmark"></i>
+                    <p class="m-0"> Save </p>
+                </div>
             </div>
         </div>
 
-    
-        <div class="image-box">
-            <div class="img-big">
-                <img src="https://i0.wp.com/www.australiangeographic.com.au/wp-content/uploads/2022/10/Green-tree-frog_Litoria-caerulea_Ashley-Whitworth-shutterstock-scaled.jpg?resize=1000%2C669&ssl=1", alt="frog-pic" >
+        <div class="image-box col-11 my-4">
+            <div class="img-big col-6">
+                <%= image_tag @frog.photo_url %>
             </div>
-            <div class="img-small">
+            <div class="img-small col-6">
                 <div class="img-small-top">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Litoria_caerulea_-_Darwin_NT.jpg/1024px-Litoria_caerulea_-_Darwin_NT.jpg", alt="frog-small-1">
+                    <%= image_tag @frog.photo_url %>
                 </div>
                 <div class="img-small-bottom">
-                    <img src="https://i.ytimg.com/vi/Ldx8P4SXkTI/maxresdefault.jpg", alt="frog-small-2">
-                    <img src="https://visitdaintree.com.au/files/2025/01/white-lipped-tree-frog-3.jpg", alt="frog-small-3">
+                    <%= image_tag @frog.photo_url %>
+                    <%= image_tag @frog.photo_url %>
                 </div>
                 <!-- <img src="https://azwp-az-prod-1-ap-southeast-2.s3.amazonaws.com/uploads/2021/08/WLT_FROG_WEB_IMAGES_900x600.jpg", alt="frog-small-4"> -->
             </div>
         
         </div>
 
-        <div class="frog-description">
-            <h2> About </h2>
-            <p> Name: <%= @frog.name %> </p>
-            <p> Species: <%= @frog.species %> </p>
-            <p> Gender: <%= @frog.gender %> </p>
-            <p> Age: <%= @frog.age %> </p>
-            <p> Description: <%= @frog.description %> </p>
-            <p> Color: <%= @frog.color %> </p>
-        </div
-    </div>
+        <div class="frog-description col-11 d-flex justify-content-between my-4 mx-auto">
+            <div class="frog-description-left col-6">
+                <div class="frog-description-left-top col-12 px-3 py-2">
+                    <h2> About </h2>
+                </div>
+                <div class="frog-description-left-content col-12 px-3 py-2">
+                    <p> Name: <%= @frog.name %> </p>
+                    <p> Species: <%= @frog.species %> </p>
+                    <p> Gender: <%= @frog.gender %> </p>
+                    <p> Age: <%= @frog.age %> </p>
+                    <p> Description: <%= @frog.description %> </p>
+                    <p> Color: <%= @frog.color %> </p>
+                </div>
+            </div>
 
-    <!-- Add a button to book the frog -->
-    <div class="row">
-        <div class="col-12 text-center">
-            <h2> Book this Frog</h2>
-            <%= simple_form_for [@frog, @booking] do |f| %>
-                <%= f.input :start_date %>
-                <%= f.input :end_date %>
-                <%= f.submit "Reserve", class: "btn btn-primary" %>
-            <% end %>
+            <div class="frog-description-right col-5">
+                <!-- Add a button to book the frog -->
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <div class="frog-form-title mb-3 py-2"> 
+                            <h2> Book this Frog</h2>
+                        </div>
+                        <p> Book this frog for your next adventure! </p>
+                        <div class="frog-form-box">
+                            <%= simple_form_for [@frog, @booking] do |f| %>
+                                <%= f.input :start_date %>
+                                <%= f.input :end_date %>
+                                <%= f.submit "Reserve", class: "btn btn-warning" %>
+                            <% end %>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-    </div>
-        
+
 </div>
