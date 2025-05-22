@@ -1,0 +1,62 @@
+.frog-description-left {
+    padding: 10px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 16px;
+}
+
+.frog-description-left-top {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(165, 187, 26);
+    border-radius: 10px;
+    h2 {
+
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+.frog-description-left-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.frog-description-right {
+    padding: 10px;
+    background-color: rgba(255,255,255,0.8);
+    border-radius: 10px;
+}
+
+.frog-form-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(165, 187, 26);
+    border-radius: 10px;
+    h2 {
+
+        font-weight: bold;
+        margin: 0;
+    }
+}
+
+.frog-form-box {
+    background-color: rgba(165, 187, 26, 0.7);
+    padding: 10px;
+    border-radius: 10px;
+
+    .btn {
+        color: rgba(0,0,0,0.7);
+        font-weight: light;
+        background-color: rgba(195, 116, 37, 0.7);
+        &:hover {
+            color: rgba(0,0,0,1);
+            font-weight: bold;
+            background-color:  rgb(244, 147, 6);
+        }
+    }
+}
