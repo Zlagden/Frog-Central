@@ -9,6 +9,7 @@
 #   end
 
 puts "Cleaning database..."
+Booking.destroy_all
 Frog.destroy_all
 User.destroy_all
 
@@ -112,6 +113,9 @@ frogs = [
   },
 ]
 
-Frog.create!(frogs)
+frogs.each do |frog| 
+  Frog.create!(frog)
+  puts "Seeding #{frog[:name]}..."
+end
 
 puts "✅ Frogs seeded successfully!#{Frog.count}"
