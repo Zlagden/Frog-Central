@@ -22,15 +22,15 @@
 
         <div class="image-box col-11 my-4">
             <div class="img-big col-6">
-                <img src="https://i0.wp.com/www.australiangeographic.com.au/wp-content/uploads/2022/10/Green-tree-frog_Litoria-caerulea_Ashley-Whitworth-shutterstock-scaled.jpg?resize=1000%2C669&ssl=1", alt="frog-pic" >
+                <%= image_tag @frog.photo_url %>
             </div>
             <div class="img-small col-6">
                 <div class="img-small-top">
-                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/b/bc/Litoria_caerulea_-_Darwin_NT.jpg/1024px-Litoria_caerulea_-_Darwin_NT.jpg", alt="frog-small-1">
+                    <%= image_tag @frog.photo_url %>
                 </div>
                 <div class="img-small-bottom">
-                    <img src="https://i.ytimg.com/vi/Ldx8P4SXkTI/maxresdefault.jpg", alt="frog-small-2">
-                    <img src="https://visitdaintree.com.au/files/2025/01/white-lipped-tree-frog-3.jpg", alt="frog-small-3">
+                    <%= image_tag @frog.photo_url %>
+                    <%= image_tag @frog.photo_url %>
                 </div>
                 <!-- <img src="https://azwp-az-prod-1-ap-southeast-2.s3.amazonaws.com/uploads/2021/08/WLT_FROG_WEB_IMAGES_900x600.jpg", alt="frog-small-4"> -->
             </div>
