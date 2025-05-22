@@ -1,29 +1,45 @@
 .image-box {
     display: flex;
-    margin-left: 20px;
-    margin-right: 20px;
+    justify-content: space-between;
+    margin: auto;
+    border: 20px solid rgba(0, 0, 0, 0);
+    background-color: rgba(250, 250, 250, 0.8);
+    border-radius: 5%;
+ 
+    
 }
 
 .img-big {
     img {
-        // width: 200px;
+        width: 100%;
         height: 300px;
+        border-bottom-left-radius: 5%;
+        border-top-left-radius: 5%;
+        margin-right: 5px;
+        overflow: hidden
+        
     }
 }
 
 .img-small-top {
+    margin-left: 5px;
     img {
         width: 100%;
         height: 150px;
         object-fit: cover;
+        border-top-right-radius: 5%;
+
     }
 }
 
 .img-small-bottom {
     display: flex;
+    margin-left: 5px;
     img {
         width: 50%;
         height: 150px;
         object-fit: cover;
+        border-bottom-right-radius: 5%;
+
     }
 }

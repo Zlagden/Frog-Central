@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
   end
 
   def create
@@ -10,7 +10,7 @@ class BookingsController < ApplicationController
     @booking.user = current_user
 
     if @booking.save
-      redirect_to frog_path(@frog), notice: "Booking created successfully."
+      redirect_to bookings_path, notice: "Booking created successfully."
     else
       render "frogs/show", status: :unprocessable_entity
     end
