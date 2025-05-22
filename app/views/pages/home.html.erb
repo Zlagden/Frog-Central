@@ -1,12 +1,14 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="background">
+  <div class="banner">
+    <video autoplay muted loop id="frogVideo">
+      <source src="<%= asset_path('frog.mp4') %>" type="video/mp4">
+    </video>
+    <div class="video-overlay"></div>
 
-
-<ol>
-    <li><%= link_to "Sign up", new_user_registration_path %></li>
-    <li><%= link_to "Sign in", new_user_session_path %></li>
-    <li><%= link_to "Edit", edit_user_registration_path %></li>
-    <li><%= link_to "Profile", user_path(current_user) %></li>
-    <li><%= link_to "Sign out", destroy_user_session_path, data: { turbo_method: :delete } %></li>
-  
-</ol> 
+    <div class="container">
+      <h1>Find your frog <strong>Today!</strong></h1>
+      <p>Give the perfect home to your frog.</p>
+      <a class="btn btn-gradient" href="/frogs">Enter</a>
+    </div>
+  </div>
+</div>
