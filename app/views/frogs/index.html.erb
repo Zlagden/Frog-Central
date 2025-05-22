@@ -8,14 +8,14 @@
       <%= link_to frog_path(frog) do %>
 
         <div class="card-trip">
-          <img src="https://images.pexels.com/photos/35669/hyla-meridionalis-the-frog-amphibians.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"/>
-
+          <%= image_tag frog.photo_url %>
             <div class="card-trip-infos">
                 <div>
                   <h2> <strong><%= frog.name %></strong></h2>
                   <p><%=frog.description %></p>
                   <h3><%= frog.age %></h3>
-                  <p><%= frog.color %>
+                  <p><%= frog.color %><p>
+                  <p><%= frog.species %></p>
                 </div>
 
                 <h2 class="card-trip-pricing"> 5 * </h2>
