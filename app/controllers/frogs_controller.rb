@@ -4,7 +4,9 @@ class FrogsController < ApplicationController
 
   def index
     @frogs = Frog.all
-
+    if params[:query].present?
+      @frogs = Frog.where("species ILIKE ?", "%#{params[:query]}%")
+    end
   end
 
   def show

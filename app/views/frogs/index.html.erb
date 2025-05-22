@@ -1,6 +1,8 @@
 <div>
   <h1 style="text-align: center">Rent your Frog Today!</h1>
 
+  <%=render "shared/search" %>
+
   <%= link_to "New Frog", new_frog_path if user_signed_in? %>
 
   <div class="card-container">
@@ -12,10 +14,10 @@
             <div class="card-trip-infos">
                 <div>
                   <h2> <strong><%= frog.name %></strong></h2>
-                  <p><%=frog.description %></p>
-                  <h3><%= frog.age %></h3>
-                  <p><%= frog.color %><p>
-                  <p><%= frog.species %></p>
+                  <p>About: <%=frog.description %></p>
+                  <h3>Age: <%= frog.age %></h3>
+                  <p>Color: <%= frog.color %><p>
+                  <p>Species: <%= frog.species %></p>
                 </div>
 
                 <h2 class="card-trip-pricing"> 5 * </h2>
