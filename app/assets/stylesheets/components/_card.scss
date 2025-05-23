@@ -4,11 +4,14 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 20px;
   padding: 100px;
-  background-color:  #a5bb1a;
+  background-color:white;
+  border: solid 10px #a5bb1a;
 }
 
 .card-trip {
 border-radius: 10px;
+
+
 }
 h1 {
   font-family: "Chango", sans-serif;
@@ -16,6 +19,10 @@ h1 {
   font-style: normal;
   font-size: 75px;
 
+  }
+
+.card-trip > img:hover {
+  transform: scale(1.03) translateY(-5px);
   }
 
 .card-trip > img {
@@ -38,6 +45,10 @@ h1 {
   margin: 0;
   color:black;
 }
+.card-trip .card-trip-infos:hover {
+transform: scale(1.03) translateY(-5px);
+
+}
 
 
 .card-trip .card-trip-infos {
@@ -48,18 +59,26 @@ h1 {
   position: relative;
   background: white;
   overflow: hidden;
-
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   border-radius: 10px;
   // width: 30%;
   height: 200px;
   margin-bottom: 25px;
+  border: solid 5px #f49306;
 }
 
-.card-trip-infos .card-trip-user {
-  position: absolute;
-  right: -20px;
-  top: -400px;
-  width: 40px;
 
+
+svg {
+  position: absolute;
+  margin-right: 10px;
+  right: 10px;
+  z-index: 1;
+  top: 10px;
+
+}
+
+
+.image-wrapper {
+  position: relative
 }

@@ -1,18 +1,24 @@
 <div>
 
-  <div class="head" style="text-align:center">
+  <div class="head bounce" style="text-align:center">
     <h1 style="text-align: center">Rent your Frog Today!</h1>
 
     <%=render "shared/search" %>
 
-    <a class="btn btn-gradient" <%= link_to "New Frog", new_frog_path if user_signed_in? %>>
+    <%= link_to "New Frog", new_frog_path, class: "btn btn-gradient" if user_signed_in? %>
   </div>
   <div class="card-container">
     <% @frogs.each do |frog| %>
       <%= link_to frog_path(frog), class: "text-decoration-none" do %>
 
         <div class="card-trip">
+
           <%= image_tag frog.photo_url %>
+            <div class="image-wrapper">
+              <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="card-trip-user" style=" color: #a5bb1a" viewBox="0 0 16 16">
+                    <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
+              </svg>
+            </div>
             <div class="card-trip-infos">
                 <div>
                   <h2> <strong><%= frog.name %></strong></h2>
@@ -23,9 +29,7 @@
                 </div>
 
 
-                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="card-trip-user" style="color: #a5bb1a " viewBox="0 0 16 16">
-                  <path d="m8 2.748-.717-.737C5.6.281 2.514.878 1.4 3.053c-.523 1.023-.641 2.5.314 4.385.92 1.815 2.834 3.989 6.286 6.357 3.452-2.368 5.365-4.542 6.286-6.357.955-1.886.838-3.362.314-4.385C13.486.878 10.4.28 8.717 2.01zM8 15C-7.333 4.868 3.279-3.04 7.824 1.143q.09.083.176.171a3 3 0 0 1 .176-.17C12.72-3.042 23.333 4.867 8 15"/>
-                </svg>
+
               </div>
         </div>
       <% end %>
