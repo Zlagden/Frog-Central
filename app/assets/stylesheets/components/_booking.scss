@@ -16,10 +16,20 @@
  
     }
 
+    .booking-title-text {
+        padding: 25px;
+        background-color: rgba(255,255,255,0.8);
+        border-radius: 10px;
+        border-style: outset;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
     img {
         width: 15%;
         height: auto;
         border-radius: 10px;
+        border-style: outset;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     }
 }
 
@@ -33,6 +43,7 @@
     background-color: rgba(255, 255, 255, 0.8);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     background-size: 100% 100%;
+    border-style: outset;
 }
 
 .booking-details {
@@ -43,6 +54,8 @@
         background-color: rgb(165, 187, 26);
         border-radius: 10px;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        border-style: outset;
+    
  
         h3 {
 
@@ -52,8 +65,9 @@
         }
 }
 
-.booking-information {
-
+.booking-image {
+    border-style: outset;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .booking-dates {
@@ -69,6 +83,9 @@
             border-radius: 10px;
             text-align: center;
             box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            border-style: outset;
+
+            
             
         }
 
@@ -84,4 +101,20 @@
         border-radius: 10px;
         box-shadow: 3px, 3px 5px rgba(0, 0, 0, 0.5);
     }
+}
+
+
+.booking-owner {
+    background-color: rgb(158, 198, 170);
+    border-radius: 10px;
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-style: outset;
+
+}
+
+.booking-delete {
+    border-radius: 10px;
+    background-color: rgb(244, 6, 6);
+    border-style: outset;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

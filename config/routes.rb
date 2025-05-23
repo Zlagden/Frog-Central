@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   resources :frogs, only: [:index, :show, :new, :create] do
     resources :bookings, only: [:create]
   end
-  resources :bookings, only: [:index]
+  resources :bookings, only: [:index, :destroy]
 
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

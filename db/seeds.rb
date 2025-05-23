@@ -15,6 +15,7 @@ User.destroy_all
 
 puts "Creating a user..."
 user = User.create!(
+  username: "FrogLover",
   email: "froglover@example.com",
   password: "password"
 )
