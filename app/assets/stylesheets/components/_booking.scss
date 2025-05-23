@@ -46,6 +46,8 @@
         background-color: rgb(165, 187, 26);
         border-radius: 10px;
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+        border-style: outset;
+    
  
         h3 {
 
@@ -73,6 +75,9 @@
             border-radius: 10px;
             text-align: center;
             box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+            border-style: outset;
+
+            
             
         }
 
@@ -95,9 +100,13 @@
     background-color: rgb(158, 198, 170);
     border-radius: 10px;
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.5);
+    border-style: outset;
+
 }
 
 .booking-delete {
     border-radius: 10px;
     background-color: rgb(244, 6, 6);
+    border-style: outset;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }

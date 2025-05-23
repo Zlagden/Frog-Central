@@ -37,7 +37,7 @@
                 </div> 
                 <div class="booking-return d-flex justify-content-end mt-3">
                   <%= link_to booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  do %>
-                    <i class="fa-solid fa-trash btn booking-delete"></i>
+                    <div class="booking-delete"><i class="fa-solid fa-trash btn"></i></div>
                   <% end %>
                 </div>
               </div>
