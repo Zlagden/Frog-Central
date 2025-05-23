@@ -5,7 +5,6 @@
 
     <%=render "shared/search" %>
 
-    <%= link_to "New Frog", new_frog_path, class: "btn btn-gradient" if user_signed_in? %>
   </div>
   <div class="card-container">
     <% @frogs.each do |frog| %>
