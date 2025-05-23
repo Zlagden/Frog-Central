@@ -10,4 +10,8 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
-@import "pages/users"
+@import "pages/users";
+// utility classes
+.cursor-pointer {
+  cursor: pointer;
+}
