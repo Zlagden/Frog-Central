@@ -22,7 +22,7 @@
             <div class="card-trip-infos">
                 <div>
                   <h2> <strong><%= frog.name %></strong></h2>
-                  <p>About: <%=frog.description %></p>
+                  <p>About: <%= truncate(frog.description, length: 60) %></p>
                   <h2>Age: <%= frog.age %></h2>
                   <p>Color: <%= frog.color %><p>
                   <p>Species: <%= frog.species %></p>
@@ -35,5 +35,5 @@
       <% end %>
     <% end %>
   </div>
-
+  <%= render "shared/footer" %>
 </div>
