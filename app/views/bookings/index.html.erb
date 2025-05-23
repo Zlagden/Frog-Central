@@ -1,12 +1,42 @@
-<h1>All Bookings</h1>
+<div class="booking-container col-10 my-3 mx-auto px-3">
+    <div class="booking-display col-11 mx-auto"  style="background-image: url(<%= image_path('pond-lotus.jpg') %>)">
 
-<ul>
-  <% @bookings.each do |booking| %>
-    <li>
-      Booking ID: <%= booking.id %> |
-      User: <%= booking.user.username %> |
-      Date: <%= booking.start_date %>
-      Date: <%= booking.end_date %> |
-    </li>
-  <% end %>
-</ul>
+        <div class="booking-title col-12 d-flex px-3 my-3 mx-auto">
+          <%= image_tag 'ka-e-ru.jpg'%>
+          <h1>All Bookings</h1>
+          <%= image_tag 'ka-e-ru.jpg'%>
+        </div>
+
+        <div class="booking-list col-10 mx-auto">
+          <% @bookings.each do |booking| %>
+            <div class="booking-item col-12 d-flex mx-auto my-3 px-3">
+
+              <div class="booking-image col-3 mx-4">
+                <%= image_tag booking.frog.photo_url %>
+              </div>
+
+              <div class="booking-details col-8">
+                <div class="booking-frog-name py-2">
+                  <h3> Frog name: <%= booking.frog.name %></h3>
+                </div>
+
+                <div class="booking-information px-5 mt-3 m-0">
+                  <p> Owner: <%= booking.frog.user.username %></p>
+                  <div class="booking-dates">
+                    <p class="s m-0"> From: <%= booking.start_date %></p>
+                    <i class="fa-solid fa-arrow-right d-flex justify-content-evenly align-middle"></i>
+                    <p class="r m-0"> To: <%= booking.end_date %></p>
+                  </div>
+                </div> 
+                <div class="booking-return d-flex justify-content-end m-0">
+                  <i class="fa-solid fa-trash btn btn-danger rounded-circle"></i>
+                </div>
+              </div>
+
+            </div>
+          <% end %>
+        </div>
+
+    </div>
+</div>
+   
