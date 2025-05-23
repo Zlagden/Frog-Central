@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
     @bookings = Booking.where(user: current_user)
+    @bookings = current_user.bookings
   end
 
   def create
@@ -15,7 +16,7 @@ class BookingsController < ApplicationController
       render "frogs/show", status: :unprocessable_entity
     end
   end
-  
+
   private
   def booking_params
     params.require(:booking).permit(:start_date, :end_date)
