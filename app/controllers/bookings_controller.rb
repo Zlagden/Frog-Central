@@ -1,6 +1,7 @@
 class BookingsController < ApplicationController
   def index
     @bookings = Booking.where(user: current_user)
+    @bookings = current_user.bookings
   end
 
   def create
@@ -14,6 +15,12 @@ class BookingsController < ApplicationController
     else
       render "frogs/show", status: :unprocessable_entity
     end
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
+    redirect_to bookings_path, notice: "Booking deleted successfully."
   end
   
   private

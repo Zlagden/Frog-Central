@@ -1,12 +1,51 @@
-<h1>All Bookings</h1>
+<div class="booking-container col-10 my-3 mx-auto px-3">
+    <div class="booking-display col-11 mx-auto pb-3"  style="background-image: url(<%= image_path('pond-lotus.jpg') %>)">
 
-<ul>
-  <% @bookings.each do |booking| %>
-    <li>
-      Booking ID: <%= booking.id %> |
-      User: <%= booking.user.username %> |
-      Date: <%= booking.start_date %>
-      Date: <%= booking.end_date %> |
-    </li>
-  <% end %>
-</ul>
+        <div class="booking-title col-12 d-flex px-3 mb-3 mt-0 mx-auto">
+          <%= image_tag 'ka-e-ru.jpg'%>
+            <div class="booking-title-text"><h1> Your Frogs </h1></div>
+          <%= image_tag 'ka-e-ru.jpg'%>
+        </div>
+
+        <div class="booking-list col-10 mx-auto">
+          <% @bookings.each do |booking| %>
+            <div class="booking-item col-12 d-flex mx-auto my-3 pr-5">
+              <div class="booking-image col-3 mx-4">
+                <%= link_to frog_path(booking.frog) do %>
+                  <%= image_tag booking.frog.photo_url %>
+                <% end %>
+              </div>
+
+              <div class="booking-details col-8">
+                <div class="booking-frog-name py-2">
+                  <h3><%= booking.frog.name %></h3>
+                </div>
+
+                <div class="booking-information px-5 mt-3 m-0">
+                  <div class="booking-owner col-12  py-2 my-2 d-flex justify-content-evenly align-middle">
+                    <div class="booking-owner-icon d-flex align-items-center">
+                      <i class="fa-solid fa-user px-2"> </i>
+                      <h5 class="m-0"> Owner: </h5>
+                    </div>
+                    <h5 class="m-0"> <%= booking.frog.user[:username] %></h5>
+                  </div>
+                  <div class="booking-dates">
+                    <p class="s m-0"> From: <%= booking.start_date %></p>
+                    <i class="fa-solid fa-arrow-right d-flex justify-content-evenly align-middle"></i>
+                    <p class="r m-0"> To: <%= booking.end_date %></p>
+                  </div>
+                </div> 
+                <div class="booking-return d-flex justify-content-end mt-3">
+                  <%= link_to booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Are you sure?"}  do %>
+                    <div class="booking-delete"><i class="fa-solid fa-trash btn"></i></div>
+                  <% end %>
+                </div>
+              </div>
+
+            </div>
+          <% end %>
+        </div>
+
+    </div>
+</div>
+   

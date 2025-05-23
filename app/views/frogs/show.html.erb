@@ -1,10 +1,10 @@
 
 <div class="frog-container col-10 my-3 mx-auto">
-    <div class="frog-display col-11 mx-auto"  style="background-image: url(<%= image_path('pond.jpg') %>)">
+    <div class="frog-display col-11 mx-auto pb-3"  style="background-image: url(<%= image_path('pond.jpg') %>)">
 
         <div class="frog-title col-12 mb-5 py-3 pl-2">
             <div class="frog-title-left 6-col">
-                <%= @frog.name %>
+                <%= "#{@frog.name} :" %>
                 <%= @frog.species %>
             </div>
             <div class="frog-title-right col-6 mt-0">
@@ -19,6 +19,7 @@
                 </div>
             </div>
         </div>
+
 
         <div class="image-box col-11 my-4">
             <div class="img-big col-6">

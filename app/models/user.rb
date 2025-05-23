@@ -4,4 +4,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :frogs, dependent: :destroy
+  has_many :bookings, dependent: :destroy
 end

@@ -1,9 +1,9 @@
 <div style="color: white">
   <%= form_with url: frogs_path, method: :get, local: true do |form| %>
     <%= form.label :query, "Search frogs" %>
-    <%= form.text_field :query, placeholder: "Search frogs 🐸 ", value: params[:query], class: "form-control" %>
+    <%= form.text_field :query, placeholder: "Search species 🐸 ", value: params[:query], class: "form-control" %>
     <div class="btn btn-gradients mt-2 mb-4">
       <%= form.submit "Search", class: "btn btn-Success" %>
     </div>
   <% end %>
-</div>
+
