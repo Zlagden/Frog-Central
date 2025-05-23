@@ -1,7 +1,7 @@
 .frog-container {
     background-color: rgb(165, 187, 26);
     // border-radius: 1rem;
-    // background: 
+    // background:
     //     linear-gradient(rgb(244, 147, 6), rgb(165, 187, 26)) padding-box, /* center */
     //     radial-gradient(circle, rgb(230, 38, 58) 0%, transparent 80%) border-box; /* border */
     // border: 10px solid transparent;
@@ -70,4 +70,18 @@
     grid-gap: 16px;
     margin-top: 16px;
     margin-right: 25px;
+}
+
+
+.head {
+  background-color: #a5bb1a;
+  border-radius: 20px;
+  padding: 30px;
+  width: 70%;
+  margin: 2rem auto;
+
+  h1 {
+    color:white;
+
+  }
 }
