@@ -1,5 +1,10 @@
-<%= form_with url: frogs_path, method: :get, local: true do |form| %>
-  <%= form.label :query, "Search frogs" %>
-  <%= form.text_field :query, placeholder: "Search frogs 🐸 ", value: params[:query], class: "form-control" %>
-  <%= form.submit "Search", class: "btn btn-Success" %>
-<% end %>
+<div class="container d-flex justify-content-center">
+  <div class="w-50">
+    <%= form_with url: frogs_path, method: :get, local: true do |form| %>
+      <div class="input-group">
+        <%= form.text_field :query, placeholder: "Search species 🐸 ", value: params[:query], class: "form-control" %>
+        <%= form.submit "Search", class: "btn btn-success m-1" %>
+      </div>
+    <% end %>
+  </div>
+</div>
